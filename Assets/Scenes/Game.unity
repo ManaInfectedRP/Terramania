@@ -150,9 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirtLayerHeight: 5
   dirt: {fileID: 5634026908348037240, guid: 5e7288e40f442b34f91a19ed8cb7705d, type: 3}
-  Grass: {fileID: -7958769179885505039, guid: c6062a7437bcd5240a583a54ea43af66, type: 3}
+  grass: {fileID: -7958769179885505039, guid: c6062a7437bcd5240a583a54ea43af66, type: 3}
   stone: {fileID: 5725184139431673129, guid: 46112cf77d57650489bb5238e0190fd3, type: 3}
+  log: {fileID: 6535173978316254009, guid: 9c552731e4dbf0f429a479f376685a3e, type: 3}
+  leaf: {fileID: -2613479253483919953, guid: 30ea972f22e92d34887ce7cf21dbc1af, type: 3}
   generateCaves: 1
+  treeChance: 15
   surfaceValue: 0.25
   worldSize: 100
   caveFreq: 0.08
@@ -161,6 +164,7 @@ MonoBehaviour:
   heightAddition: 25
   seed: 0
   noiseTexture: {fileID: 0}
+  worldTiles: []
 --- !u!4 &194673806
 Transform:
   m_ObjectHideFlags: 0
@@ -282,7 +286,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -307,7 +311,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 55.458202, y: 41.434704, z: -49.84327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
