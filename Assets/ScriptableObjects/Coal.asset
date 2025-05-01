@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfb5d8c3ae3ebf4d952ccd6be7fdc52, type: 3}
   m_Name: Coal
   m_EditorClassIdentifier: 
-  tileName: Stone
-  tileSprite: {fileID: 5725184139431673129, guid: 46112cf77d57650489bb5238e0190fd3, type: 3}
+  tileName: Coal
+  tileSprites:
+  - {fileID: 21300000, guid: 4a645d14dded8b74187207b215ef1420, type: 3}
+  - {fileID: 21300000, guid: 9058f0b944bff1444b66806fa15259ee, type: 3}

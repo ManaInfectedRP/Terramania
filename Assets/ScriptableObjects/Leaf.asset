@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Leaf
   m_EditorClassIdentifier: 
   tileName: Leaf
-  tileSprite: {fileID: -2613479253483919953, guid: 30ea972f22e92d34887ce7cf21dbc1af, type: 3}
+  tileSprites:
+  - {fileID: 21300000, guid: 30ea972f22e92d34887ce7cf21dbc1af, type: 3}

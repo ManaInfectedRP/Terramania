@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   tileName: Stone
-  tileSprite: {fileID: 5725184139431673129, guid: 46112cf77d57650489bb5238e0190fd3, type: 3}
+  tileSprites:
+  - {fileID: 21300000, guid: 46112cf77d57650489bb5238e0190fd3, type: 3}
