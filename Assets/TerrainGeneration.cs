@@ -48,14 +48,14 @@ public class TerrainGeneration : MonoBehaviour
         
         //* Generates NoiseMaps *
         DrawTextures();
-        DrawCavesAndOres();
+        DrawCaves();
         
         //* Terrain *
         CreateChunks();
         GenerateTerrain();
     }
 
-    public void DrawCavesAndOres()
+    public void DrawCaves()
     {
         for (int x = 0; x < worldSize; x++)
         {
@@ -71,6 +71,30 @@ public class TerrainGeneration : MonoBehaviour
                 else
                 {
                     caveNoiseTexture.SetPixel(x,y, Color.black);
+                }
+            }
+        }
+        
+        for (int x = 0; x < worldSize; x++)
+        {
+            for (int y = 0; y < worldSize; y++)
+            {
+                for (int i = 0; i < curBiome.ores.Length; i++)
+                {
+                    curBiome = GetCurrentBiome(x, y);
+
+                    float v = Mathf.PerlinNoise((x + seed) * curBiome.ores[i].rarity,
+                        (y + seed) * curBiome.ores[i].rarity);
+                    if (v > curBiome.ores[i].size)
+                    {
+                        ores[i].spreadTexture.SetPixel(x, y, Color.white);
+                    }
+                    else
+                    {
+                        ores[i].spreadTexture.SetPixel(x, y, Color.black);
+                    }
+            
+                    ores[i].spreadTexture.Apply();
                 }
             }
         }
