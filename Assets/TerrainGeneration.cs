@@ -34,16 +34,6 @@ public class TerrainGeneration : MonoBehaviour
 
     [Header("Ore Settings")]
     public OreClass[] ores;
-    // public float coalRarity;
-    // public float coalSize;
-    // public float ironRarity, ironSize;
-    // public float goldRarity, goldSize;
-    // public float diamondRarity, diamondSize;
-    //
-    // public Texture2D coalSpread;
-    // public Texture2D ironSpread;
-    // public Texture2D goldSpread;
-    // public Texture2D diamondSpread;
     
     private GameObject[] worldChunks;
     private List<Vector2> worldTiles = new List<Vector2>();
@@ -226,21 +216,21 @@ public class TerrainGeneration : MonoBehaviour
     
     public void PlaceTile(Sprite[] tileSprites, int x, int y)
     {
-        GameObject newTile = new GameObject();
+        if(!worldTiles.Contains(new Vector2(x,y)))
+        {
+            GameObject newTile = new GameObject();
 
-        float chunkCoord = (Mathf.Round(x / chunkSize) * chunkSize);
-        chunkCoord /= chunkSize;
-        newTile.transform.parent = worldChunks[(int)chunkCoord].transform;
-        
-        
-        newTile.AddComponent<SpriteRenderer>();
+            float chunkCoord = (Mathf.Round(x / chunkSize) * chunkSize);
+            chunkCoord /= chunkSize;
+            newTile.transform.parent = worldChunks[(int)chunkCoord].transform;
+            newTile.AddComponent<SpriteRenderer>();
+            int spriteIndex = Random.Range(0, tileSprites.Length);
+            newTile.GetComponent<SpriteRenderer>().sprite = tileSprites[spriteIndex];
 
-        int spriteIndex = Random.Range(0, tileSprites.Length);
-        newTile.GetComponent<SpriteRenderer>().sprite = tileSprites[spriteIndex];
-        
-        newTile.name = tileSprites[0].name;
-        newTile.transform.position = new Vector2(x + 0.5f, y + 0.5f);
-        
-        worldTiles.Add(newTile.transform.position - (Vector3.one * 0.5f));
+            newTile.name = tileSprites[0].name;
+            newTile.transform.position = new Vector2(x + 0.5f, y + 0.5f);
+
+            worldTiles.Add(newTile.transform.position - (Vector3.one * 0.5f));
+        }
     }
 }
