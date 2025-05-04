@@ -11,8 +11,6 @@ public class BiomeClass
     [FormerlySerializedAs("biomeAtlas")] public TileAtlas tileAtlas;
     
     [Header("Noise Settings")]
-    public float caveFreq = 0.08f;
-    public float terrainFreq = 0.04f;
     public Texture2D caveNoiseTexture;
     
     [Header("Generation Settings")]

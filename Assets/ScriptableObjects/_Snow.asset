@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grass: {fileID: 11400000, guid: d45d587d79c2ec34a93678f9e4a6d105, type: 2}
   dirt: {fileID: 11400000, guid: d45d587d79c2ec34a93678f9e4a6d105, type: 2}
-  stone: {fileID: 11400000, guid: 4e6136296d8322d4d8efbccb3210293e, type: 2}
+  stone: {fileID: 11400000, guid: d45d587d79c2ec34a93678f9e4a6d105, type: 2}
   sand: {fileID: 11400000, guid: c625939987b660d49ae0b692fe3c9445, type: 2}
   snow: {fileID: 11400000, guid: d45d587d79c2ec34a93678f9e4a6d105, type: 2}
   log: {fileID: 11400000, guid: 81ab51b4ad4715e4bab39287c6396003, type: 2}
