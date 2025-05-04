@@ -15,6 +15,7 @@ public class TileAtlas : ScriptableObject
     
     [Header("Addons")]
     public TileClass tallGrass;
+    public TileClass cactus;
     
     [Header("Ores")]
     public TileClass coal;

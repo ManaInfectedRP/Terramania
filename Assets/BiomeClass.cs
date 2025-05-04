@@ -6,9 +6,9 @@ using UnityEngine.Serialization;
 public class BiomeClass
 {
     public string biomeName;
-    public Color biomeColor;
+    [FormerlySerializedAs("biomeColor")] public Color biomeCol;
 
-    public TileAtlas biomeAtlas;
+    [FormerlySerializedAs("biomeAtlas")] public TileAtlas tileAtlas;
     
     [Header("Noise Settings")]
     public float caveFreq = 0.08f;
